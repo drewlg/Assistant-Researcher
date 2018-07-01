@@ -15,11 +15,11 @@ from mycroft.util.log import LOG
 # from the MycroftSkill class.  You extend this class as shown below.
 
 # TODO: Change "Template" to a unique name for your skill
-class TemplateSkill(MycroftSkill):
+class ResearcherSkill(MycroftSkill):
 
     # The constructor of the skill, which calls MycroftSkill's constructor
     def __init__(self):
-        super(TemplateSkill, self).__init__(name="TemplateSkill")
+        super(ResearcherSkill, self).__init__(name="ResearcherSkill")
         
         # Initialize working variables used within the skill.
         self.count = 0
@@ -35,7 +35,7 @@ class TemplateSkill(MycroftSkill):
     #   'Hello world'
     #   'Howdy you great big world'
     #   'Greetings planet earth'
-    @intent_handler(IntentBuilder("").require("Hello").require("World"))
+    @intent_handler(IntentBuilder("").require("Research").require("Assistant"))
     def handle_hello_world_intent(self, message):
         # In this case, respond by simply speaking a canned response.
         # Mycroft will randomly speak one of the lines from the file
