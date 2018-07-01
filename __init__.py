@@ -36,11 +36,11 @@ class ResearcherSkill(MycroftSkill):
     #   'Howdy you great big world'
     #   'Greetings planet earth'
     @intent_handler(IntentBuilder("").require("Research").require("Assistant"))
-    def handle_hello_world_intent(self, message):
+    def handle_research_assistant_intent(self, message):
         # In this case, respond by simply speaking a canned response.
         # Mycroft will randomly speak one of the lines from the file
         #    dialogs/en-us/hello.world.dialog
-        self.speak_dialog("hello.world")
+        self.speak_dialog("research.assistant")
 
     @intent_handler(IntentBuilder("").require("Count").require("Dir"))
     def handle_count_intent(self, message):
